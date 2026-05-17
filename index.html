@@ -219,7 +219,7 @@ progress+=20;
 bar.style.width=progress+"%";
 
 status.innerText=
-steps[Math.floor(progress/20)-1] || "Processing...";
+steps[Math.floor(progress/100)-1] || "Processing...";
 
 if(progress>=100000000000){
 
