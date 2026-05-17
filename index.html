@@ -215,11 +215,11 @@ let steps=[
 
 let interval=setInterval(()=>{
 
-progress+=100;
+progress+=20;
 bar.style.width=progress+"%";
 
 status.innerText=
-steps[Math.floor(progress/100)-1] || "Processing...";
+steps[Math.floor(progress/1000)-1] || "Processing...";
 
 if(progress>=100000000000){
 
