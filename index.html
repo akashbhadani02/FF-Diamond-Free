@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gaming Reward Generator - PRANK</title>
+<title>Free Fire Game Diamond Download</title>
 
 <style>
 *{
@@ -14,35 +14,41 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#090909,#121d35,#000);
+background:linear-gradient(135deg,#050816,#101c33,#000);
 display:flex;
 justify-content:center;
 align-items:center;
 height:100vh;
-color:white;
 overflow:hidden;
+color:white;
 }
 
 .container{
-width:350px;
-background:rgba(20,20,30,.95);
-padding:25px;
-border-radius:20px;
-box-shadow:0 0 30px #00ffe5;
+width:360px;
+background:rgba(16,20,35,.96);
+padding:28px;
+border-radius:24px;
 text-align:center;
-border:2px solid #00ffe5;
+box-shadow:0 0 40px rgba(0,255,255,.35);
+border:1px solid rgba(0,255,255,.4);
+}
+
+.logo{
+font-size:30px;
+margin-bottom:10px;
 }
 
 h1{
-font-size:24px;
-color:#00ffe5;
-margin-bottom:15px;
+font-size:26px;
+color:#00f7ff;
+margin-bottom:8px;
 }
 
 .subtitle{
-color:#bbb;
-font-size:14px;
-margin-bottom:20px;
+font-size:13px;
+color:#aeb6d0;
+margin-bottom:22px;
+line-height:1.5;
 }
 
 input,select{
@@ -50,39 +56,40 @@ width:100%;
 padding:14px;
 margin:10px 0;
 border:none;
-border-radius:12px;
-background:#1f1f2e;
+border-radius:14px;
+background:#1b2238;
 color:white;
-font-size:16px;
+font-size:15px;
 outline:none;
 }
 
 button{
 width:100%;
-padding:14px;
-background:linear-gradient(90deg,#00ffe5,#00a8ff);
+padding:15px;
+margin-top:10px;
 border:none;
-border-radius:12px;
-font-size:18px;
+border-radius:14px;
+font-size:17px;
 font-weight:bold;
+background:linear-gradient(90deg,#00f7ff,#00ff88);
+color:#000;
 cursor:pointer;
-color:black;
 transition:.3s;
 }
 
 button:hover{
-transform:scale(1.04);
+transform:scale(1.03);
 }
 
 .progressBox{
 display:none;
-margin-top:18px;
+margin-top:20px;
 }
 
 .progress{
-height:14px;
-background:#222;
-border-radius:20px;
+height:15px;
+background:#1b2238;
+border-radius:30px;
 overflow:hidden;
 margin-top:10px;
 }
@@ -90,14 +97,14 @@ margin-top:10px;
 .bar{
 height:100%;
 width:0%;
-background:linear-gradient(90deg,#00ffe5,#00ff6a);
-transition:.4s;
+background:linear-gradient(90deg,#00f7ff,#00ff88);
+transition:.5s;
 }
 
 .status{
-margin-top:10px;
-color:#00ffe5;
 font-size:14px;
+color:#00f7ff;
+margin-top:10px;
 }
 
 .popup{
@@ -106,21 +113,22 @@ position:fixed;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
-background:#111;
-padding:25px;
-border-radius:20px;
+background:#101827;
+padding:28px;
+width:320px;
+border-radius:24px;
 text-align:center;
 border:2px solid #00ff99;
-box-shadow:0 0 35px #00ff99;
-width:320px;
-animation:pop .4s ease;
+box-shadow:0 0 40px rgba(0,255,153,.45);
+animation:popup .4s ease;
 }
 
-@keyframes pop{
+@keyframes popup{
 from{
-transform:translate(-50%,-50%) scale(.6);
+transform:translate(-50%,-50%) scale(.7);
 opacity:0;
 }
+
 to{
 transform:translate(-50%,-50%) scale(1);
 opacity:1;
@@ -128,15 +136,33 @@ opacity:1;
 }
 
 .success{
-font-size:28px;
+font-size:32px;
+margin-bottom:12px;
 color:#00ff99;
-margin-bottom:10px;
 }
 
-.warning{
-margin-top:15px;
+.reward{
+font-size:20px;
+margin:15px 0;
+color:#00f7ff;
+font-weight:bold;
+}
+
+.note{
+margin-top:16px;
 font-size:12px;
-color:#ff9090;
+color:#b4ffb3;
+line-height:1.5;
+}
+
+.badge{
+display:inline-block;
+padding:6px 12px;
+background:#18243d;
+border-radius:20px;
+font-size:12px;
+margin-bottom:14px;
+color:#00ffcc;
 }
 </style>
 </head>
@@ -144,25 +170,55 @@ color:#ff9090;
 
 <div class="container">
 
-<h1>GAMING REWARD HUB</h1>
-<div class="subtitle">Special Event Reward System</div>
+<div class="logo">🎮</div>
 
-<input type="text" id="uid" placeholder="Enter Player UID">
+<h1>FREEFIRE DIAMONDS AND COINS</h1>
+
+<div class="subtitle">
+Enter UID or Username below
+</div>
+
+<input type="text" id="uid" placeholder="Enter Player ID">
 
 <select id="diamond">
-<option>500 Rewards</option>
-<option>1000 Rewards</option>
-<option>5000 Rewards</option>
-<option>9999999 Rewards</option>
-<option>999999999 Rewards</option>
+<option>10000 Coins</option>
+<option>50000 Coins</option>
+<option>100000 Coins</option>
+<option>500000 Coins</option>
+<option>1000000 Coins</option>
+<option>2000000 Coins</option>
+<option>5000000 Coins</option>
+<option>10000000 Coins</option>
+<option>20000000 Coins</option>
+<option>50000000 Coins</option>
+<option>100000000 Coins</option>
+<option>200000000 Coins</option>
+<option>500000000 Coins</option>
+<option>1000000000 Coins</option>
+<option>10000 Diamond</option>
+<option>50000 Diamond</option>
+<option>100000 Diamond</option>
+<option>500000 Diamond</option>
+<option>1000000 Diamond</option>
+<option>2000000 Diamond</option>
+<option>5000000 Diamond</option>
+<option>10000000 Diamond</option>
+<option>20000000 Diamond</option>
+<option>50000000 Diamond</option>
+<option>100000000 Diamond</option>
+<option>200000000 Diamond</option>
+<option>500000000 Diamond</option>
+<option>1000000000 Diamond</option>
 </select>
 
-<button onclick="startPrank()">GENERATE</button>
+<button onclick="startSimulation()">
+GET YOUR REWARD HERE
+</button>
 
 <div class="progressBox" id="progressBox">
 
 <div class="status" id="status">
-Connecting to secure server...
+Connecting to server...
 </div>
 
 <div class="progress">
@@ -175,25 +231,27 @@ Connecting to secure server...
 
 <div class="popup" id="popup">
 
-<div class="success">✔ SUCCESS!</div>
+<div class="badge">PROCESS COMPLETE</div>
 
-<p id="resultText"></p>
+<div class="success">✔</div>
 
-<div class="warning">
-You will get in 3 to 7 working days
+<div class="reward" id="resultText"></div>
+
+<div class="note" id="deliveryNote">
+Your reward will arrive soon.
 </div>
 
 </div>
 
 <script>
 
-function startPrank(){
+function startSimulation(){
 
 let uid=document.getElementById("uid").value;
 let diamond=document.getElementById("diamond").value;
 
-if(uid==""){
-alert("Enter UID first!");
+if(uid===""){
+alert("Please enter Player ID");
 return;
 }
 
@@ -206,11 +264,18 @@ progressBox.style.display="block";
 let progress=0;
 
 let steps=[
-"Connecting to secure server...",
-"Checking UID database...",
-"Verifying player account...",
-"Encrypting reward packet...",
-"Finalizing delivery..."
+"Connecting to demo server...",
+"Checking player profile...",
+"Preparing reward animation...",
+"Syncing game inventory...",
+"Finishing simulation..."
+];
+
+let randomNotes=[
+"You will get your reward between 2 to 4 working days.",
+"You will get your reward between 3 to 5 working days.",
+"You will get your reward between 1 to 3 working days.",
+"You will get your reward between 4 to 7 working days."
 ];
 
 let interval=setInterval(()=>{
@@ -230,7 +295,13 @@ setTimeout(()=>{
 document.getElementById("popup").style.display="block";
 
 document.getElementById("resultText").innerHTML=
-diamond+" successfully sent to UID <br><b>"+uid+"</b>";
+`${diamond} added to profile <br><b>${uid}</b>`;
+
+let randomMessage =
+randomNotes[Math.floor(Math.random()*randomNotes.length)];
+
+document.getElementById("deliveryNote").innerText =
+randomMessage;
 
 },700);
 
