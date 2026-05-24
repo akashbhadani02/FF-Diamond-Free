@@ -31,6 +31,7 @@ border-radius:24px;
 text-align:center;
 box-shadow:0 0 40px rgba(0,255,255,.35);
 border:1px solid rgba(0,255,255,.4);
+display:none;
 }
 
 .logo{
@@ -164,11 +165,75 @@ font-size:12px;
 margin-bottom:14px;
 color:#00ffcc;
 }
+
+/* LOGIN SCREEN */
+
+#loginScreen{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#050816;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.loginBox{
+width:340px;
+background:#101827;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 0 40px rgba(0,255,255,.3);
+border:1px solid rgba(0,255,255,.4);
+}
+
+.loginTitle{
+color:#00f7ff;
+margin-bottom:20px;
+font-size:28px;
+}
+
+.error{
+color:red;
+margin-top:12px;
+font-size:13px;
+display:none;
+}
 </style>
 </head>
 <body>
 
-<div class="container">
+<!-- LOGIN SCREEN -->
+
+<div id="loginScreen">
+
+<div class="loginBox">
+
+<div class="loginTitle">ADMIN LOGIN</div>
+
+<input type="text" id="adminId" placeholder="Enter ID">
+
+<input type="password" id="adminPass" placeholder="Enter Password">
+
+<button onclick="checkLogin()">
+LOGIN
+</button>
+
+<div class="error" id="loginError">
+Wrong ID or Password
+</div>
+
+</div>
+
+</div>
+
+<!-- MAIN CONTENT -->
+
+<div class="container" id="mainContainer">
 
 <div class="logo">🎮</div>
 
@@ -229,6 +294,8 @@ Connecting to server...
 
 </div>
 
+<!-- POPUP -->
+
 <div class="popup" id="popup">
 
 <div class="badge">PROCESS COMPLETE</div>
@@ -244,6 +311,29 @@ Your reward will arrive soon.
 </div>
 
 <script>
+
+/* LOGIN */
+
+function checkLogin(){
+
+let id=document.getElementById("adminId").value;
+let pass=document.getElementById("adminPass").value;
+
+if(id==="admin" && pass==="FFPASSWORD"){
+
+document.getElementById("loginScreen").style.display="none";
+
+document.getElementById("mainContainer").style.display="block";
+
+}else{
+
+document.getElementById("loginError").style.display="block";
+
+}
+
+}
+
+/* SIMULATION */
 
 function startSimulation(){
 
@@ -281,12 +371,13 @@ let randomNotes=[
 let interval=setInterval(()=>{
 
 progress+=20;
+
 bar.style.width=progress+"%";
 
 status.innerText=
 steps[Math.floor(progress/20)-1] || "Processing...";
 
-if(progress>=1000){
+if(progress>=100){
 
 clearInterval(interval);
 
